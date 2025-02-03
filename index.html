@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+        <!-- Display -->
+        <input type="text" id="display" readonly class="w-full h-12 mb-4 px-3 py-2 text-right text-2xl font-bold bg-gray-200 rounded-lg" value="0">
+
+        <!-- Buttons -->
+        <div class="grid grid-cols-4 gap-2">
+            <button onclick="clearDisplay()" class="col-span-2 bg-red-500 text-white p-4 rounded-lg hover:bg-red-600">C</button>
+            <button onclick="deleteLast()" class="bg-yellow-500 text-white p-4 rounded-lg hover:bg-yellow-600">DEL</button>
+            <button onclick="appendOperator('/')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">/</button>
+
+            <button onclick="appendNumber('7')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">7</button>
+            <button onclick="appendNumber('8')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">8</button>
+            <button onclick="appendNumber('9')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">9</button>
+            <button onclick="appendOperator('*')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">*</button>
+
+            <button onclick="appendNumber('4')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">4</button>
+            <button onclick="appendNumber('5')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">5</button>
+            <button onclick="appendNumber('6')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">6</button>
+            <button onclick="appendOperator('-')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">-</button>
+
+            <button onclick="appendNumber('1')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">1</button>
+            <button onclick="appendNumber('2')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">2</button>
+            <button onclick="appendNumber('3')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">3</button>
+            <button onclick="appendOperator('+')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">+</button>
+
+            <button onclick="appendNumber('0')" class="col-span-2 bg-gray-300 p-4 rounded-lg hover:bg-gray-400">0</button>
+            <button onclick="appendNumber('.')" class="bg-gray-300 p-4 rounded-lg hover:bg-gray-400">.</button>
+            <button onclick="calculate()" class="bg-green-500 text-white p-4 rounded-lg hover:bg-green-600">=</button>
+        </div>
+    </div>
     
 </body>
 </html>
